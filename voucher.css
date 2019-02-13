@@ -1,0 +1,162 @@
+/*display grid */
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*nested grid in main */
+
+.main {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: center;
+    margin-left: 2%;
+    margin-top: 5%;
+    overflow: auto;
+}
+/*position shop div conatining basket and DP */
+
+#shop {
+    text-align: right;
+    padding-right: 10%;
+    font-size: 25px;
+    padding-top: 2%;
+}
+/*sty;e and position vouchers */
+
+img {
+    height: 150px;
+    margin: 10px;
+}
+/*style and position buttons */
+
+input#voucher10 {
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    margin-left: 28%;
+    transition-duration: 0.4s
+}
+input#voucher20 {
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    margin-left: 28%;
+    transition-duration: 0.4s
+}
+input#voucher50 {
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    margin-left: 28%;
+    transition-duration: 0.4s
+}
+input#voucher10:hover {
+    font-size: 16px
+}
+input#voucher20:hover {
+    font-size: 16px
+}
+input#voucher50:hover {
+    font-size: 16px
+}
+/*style and position red pop up counter */
+
+.dP {
+    background-color: red;
+    width: 20px;
+    border-radius: 100%;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin: -2%;
+}
+.dP {
+    margin-left: 99%;
+    margin-bottom: -3%;
+    position: relative
+}
+a:link {
+    text-decoration: none;
+}
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+}
+/*style font awesome in nav then in shop */
+
+#navbar .fas {
+    color: black;
+    transition-duration: 1s;
+}
+#navbar .fas:hover {
+    transform: rotate(720deg);
+}
+/*start animation for cart */
+
+#shop .fas {
+    color: black;
+    transition-duration: 1s;
+}
+#shop .fas:hover {
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+    font-size: 30px
+}
+/*keyframes to shake cart when hover */
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/*style and position footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+}
+/*style and position font awesome elfooter elements */
+
+.fa-facebook {
+    color: darkblue;
+    margin-left: 10%;
+}
+.fa-instagram {
+    color: purple;
+    margin-left: 30%
+}
+.fa-twitter {
+    margin-left: 40%;
+}
+/*grid media queries */
+
+@media (max-width: 700px) {
+    .voucher1, .voucher2, .voucher3 {
+        grid-column: 1 / span 5;
+        margin-bottom: 20%
+    }
+    html {
+        overflow: scroll;
+    }
+}

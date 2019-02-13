@@ -1,0 +1,104 @@
+/*css to style and position the pop up form */
+
+.form-popup {
+    border: 3px solid #BFC9CA;
+    z-index: 9;
+    margin: 3%;
+    display: none;
+}
+
+
+.form-container {
+    max-width: 90%;
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    font-size: 10px;
+    font-family: Helvetica, Arial, Sans-Serif, serif;
+    margin: 5%;
+    background-color: white;
+}
+.form-content input {
+    font-size: 25px;
+}
+.form-content {
+    font-size: 15px;
+    width: 40%;
+}
+.formside {
+    background-color: #E5E7E9;
+
+}
+/*style and position buttons and js output*/
+
+.basket {
+    margin: 15% 5% 50% 5%;
+    font-size: 30px;
+
+}
+
+ #displayOrder li{
+
+    list-style: none;
+     font-size: 60%;
+ }
+.total {
+    margin: 0 5% 5% 5%
+}
+#buy {
+    position: relative
+}
+#buy {
+    margin-left: 110%;
+    margin-bottom: 5%;
+    font-size: 80%;
+    border-radius: 4px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    transition-duration: 0.5s
+}
+#buy:hover {
+    background-color: #27AE60;
+}
+#cancel {
+    background-color: #CD6155;
+    color: white;
+    font-size: 80%;
+    transition-duration: 0.5s;
+    margin-top: 5%
+}
+#cancel:hover {
+    background-color: #641E16
+}
+/*media queries display grid */
+
+@media (max-width: 700px) {
+    .form-popup {
+        max-width: 80%;
+        grid-column: 1 / span 5;
+    }
+    .form-container {
+        grid-template-columns: 50% 40%;
+    }
+    .formside {
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    .form-content {
+        font-size: 10px;
+    }
+    li {
+        list-style-type: none;
+    }
+    .form-content input {
+        font-size: 13px;
+    }
+    #buy {
+        font-size: 50%;
+        margin-left: 10%
+    }
+    #cancel {
+        font-size: 50%;
+    }}

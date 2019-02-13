@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="voucher.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="stylesheet" href="css/font-awesome-animation.min.css">
+
+</head>
+<body>
+<div id="navbar">
+
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <!-- Brand -->
+        <a class="navbar-brand" href="Index.html">Get Media <i class="fas fa-compact-disc animated fa-2x"></i></a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="voucher.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Search.html">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <hr>
+</div>
+<div class="wrapper">
+
+
+
+    <div id="shop">
+
+        <a href="#" onclick="openForm()">
+            <div class="dP"> <p id="displayBasket"></p></div>
+            <i class="fas fa-shopping-cart animated-hover"></i>  </a>
+
+    </div><!-- end shop -->
+
+
+    <div class="form-popup" id="myForm">
+
+        <div class="form-container">
+
+            <form action="/#"  method="post">
+
+                <div class="form-head">
+                    <h5>Please enter your details and process to payment</h5>
+                </div>
+
+                <div class="form-grid">
+                <div class="form-content">
+                  Name:<br/>
+                    <input type="text" name="name" pattern="[A-Za-z]+"
+                           required oninvalid="this.setCustomValidity('Please enter your name')"><br/>
+
+
+                    Contact Number:<br/>
+                    <input type="number" placeholder="" name="number"
+                           required oninvalid="this.setCustomValidity('Please enter a valid phone number')"><br/>
+
+                    Email Address<br/>
+                    <input type="email" placeholder="" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                           required oninvalid="this.setCustomValidity('Please enter a valid email address')"><br/>
+
+                    Address:<br/>
+                    <input type="text" placeholder="" pattern="[A-Za-z] +[0-9]" name="address"
+                           required oninvalid="this.setCustomValidity('Please enter your address ')"><br/>
+
+                    <button type="submit" id="cancel" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button id="buy" type="submit" class="btn">Payment</button>
+
+                </div><!-- content -->
+
+            <div class="formside">
+
+                <div class="basket">
+                    <p>Basket:</p>
+                    <ul id="displayOrder"> </ul>
+                    <hr>
+                </div>
+
+                <div class="total">
+                    <p>Order Total:</p><p id="displayPrice" >
+                    <hr>
+                </div>
+
+
+            </div><!-- end aside -->
+            </form>
+        </div>
+        </div><!-- end of container-->
+    </div> <!-- end of form -->
+
+
+
+    <div class="main">
+
+
+        <div class="voucher1" >
+            <img src="images/voucher1.GIF" alt="voucher £10">
+            <input id="voucher10" type="button"  onclick="basket();addVouchers()" value="£10.00"  voucherid="0">
+        </div>
+        <div class="voucher2">
+            <img src="images/voucher2.GIF" alt="voucher £20">
+            <input id="voucher20" type="button" onclick="basket();addVouchers()" value="£20.00" voucherid="1">
+        </div>
+
+        <div class="voucher3">
+            <img src="images/voucher3.GIF" alt="Voucher £50">
+            <input id="voucher50" type="button" onclick="basket();addVouchers()" value="£50.00" voucherid="2">
+        </div>
+    </div><!-- end of main-->
+
+</div><!-- end of wrapper -->
+<div class="footer">
+    <hr>
+
+
+    <a href="www.facebook.com"><i class="fab fa-facebook "></i></a>
+
+
+    <a href="www.instagram.com"><i class="fab fa-twitter "></i></a>
+
+
+    <a href="wwww.twitter.com"><i class="fab fa-instagram"></i></a>
+
+</div>
+
+
+
+
+<script src="voucher.js"></script>
+<script src="form.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

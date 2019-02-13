@@ -1,0 +1,66 @@
+/*display as a grid */
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 70%;
+}
+hr {
+    margin: 0;
+}
+img {
+    width: 100%;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #FDFDFD;
+    margin: 0;
+    overflow: hidden;
+}
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+}
+.main {
+    margin-top: 40%;
+    margin-left: 8%;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h2 {
+    font-size: 40px
+}
+/*positions and styles button */
+
+#searchBtn a{
+    font-size: 30px;
+    border-radius: 4px;
+    background-color: #00aeef;
+    color: white;
+    border: none;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    margin-left: 70%;
+    margin-top: 4%;
+}
+#searchBtn a:hover {
+    background-color: white;
+    border: 1px solid #00aeef;
+    color: black;
+}
+
+/*styles the font awesome logo*/
+
+.fas {
+    color: black;
+    transition-duration: 1s;
+}
+.fas:hover {
+    transform: rotate(720deg);
+}
+
+/*change grid for responsiveness */
+@media (max-width: 700px) {
+    .pic, main {
+        grid-column: 1 / span 5;
+        overflow: scroll;
+    }
+}

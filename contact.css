@@ -1,0 +1,69 @@
+/*dirsplay grid */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 5%;
+}
+/*styles font awesome logo */
+
+.fas {
+    color: black;
+    transition-duration: 1s;
+}
+.fas:hover {
+    transform: rotate(720deg);
+}
+/*position the form */
+
+.form {
+    margin-top: 5%
+}
+
+
+
+.fa-facebook {
+    color: darkblue;
+    margin-left: 10%;
+}
+.fa-instagram {
+    color: purple;
+    margin-left: 30%
+}
+.fa-twitter {
+    margin-left: 40%;
+}
+/*style and position footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+}
+
+.form-check{
+    margin-left: 5px;
+
+}
+
+.btn-primary{
+    margin-top: 15px;
+}
+iframe{
+
+    width: 200px;
+    height: 200px;
+}
+/* grid media queries */
+
+@media (max-width: 700px) {
+    .side, .form {
+        grid-column: 1 / span 5;
+    }
+    html {
+        max-width: 90%;
+    }
+}

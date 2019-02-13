@@ -1,0 +1,123 @@
+.bg {
+    /* The image used */
+    background-image: url("images/antique-black-and-white-classic-1021876.jpg");
+
+
+    min-height: 30000px;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        opacity: 0.9;
+
+}
+
+
+
+/*display grid */
+
+.wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 10vw 20vw;
+    grid-gap: 5px;
+
+}
+.wrapper {
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*display results in nested grid */
+
+.results {
+    grid-row: 1 / span 2
+}
+
+/*footer at bottom on screen fixed */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: inline-block;
+}
+/*styles the search bar and button */
+
+#searchBar {
+    font-size: 15px;
+    border: #ff5050 1px solid;
+    box-shadow: 4px 6px 11px 0px rgba(255, 80, 80, 0.36);
+    color: #FF5050;
+}
+#searchBtn {
+    font-size: 15px;
+    border-radius: 4px;
+    background-color: white;
+    color: #ff5050;
+    border: #FF5050 1px solid;
+    transition-duration: 0.5s
+}
+#searchBtn:hover {
+    font-size: 18px
+}
+#searchBar:active {
+    text-decoration: none
+}
+/*styles the searc hresults */
+
+table {
+    color: #ff5050;
+    font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 0.5px 0.5px black;
+}
+
+
+table{
+
+    background-color: rgba(192,192,192,0.3) ;
+}
+table {
+    margin-left: 10%;
+    margin-top: 5%
+}
+/*style nav logo */
+
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+}
+/*styles the font awesome logo */
+
+.fas {
+    color: black;
+    transition-duration: 1s;
+}
+.fas:hover {
+    font-size: 45px;
+    transform: rotate(720deg);
+}
+/*styles font awesoem footer logos */
+
+.fa-facebook {
+    color: darkblue;
+    margin-left: 10%;
+}
+.fa-instagram {
+    color: purple;
+    margin-left: 30%
+}
+.fa-twitter {
+    margin-left: 40%;
+}
+.fa-play-circle {
+    color: black
+}
+/*grid responsive queries */
+
+@media (max-width: 700px) {
+    .wrapper {
+        grid-auto-flow: row;
+    }
+}
